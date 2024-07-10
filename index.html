@@ -19,6 +19,39 @@
     <center><button class="convert" onclick="countWords()">Count Words <img src="./Images/word (1).png" height="10px" width="12px"></button>
     <button class="convert" onclick="countCharacters()">Count Characters <img src="./Images/word.png" height="10px" width="12px"></button></center>
     </div>
+
+    <script>
+      function makeLowerCase() {
+        const inputElement = document.getElementById("input-text")
+        const resultElement = document.getElementById("result-text")
+  
+        resultElement.innerText = inputElement.value.toLowerCase()
+      }
+  
+      function makeUpperCase() {
+        const inputElement = document.getElementById("input-text")
+        const resultElement = document.getElementById("result-text")
+  
+        resultElement.innerText = inputElement.value.toUpperCase()
+      }
+  
+      function countWords() {
+        const inputElement = document.getElementById("input-text")
+        const resultElement = document.getElementById("result-text")
+  
+        resultElement.innerText = `Total Words: ${inputElement.value.split(" ").length}`
+  
+      }
+  
+      function countCharacters() {
+        const inputElement = document.getElementById("input-text")
+        const resultElement = document.getElementById("result-text")
+  
+        resultElement.innerText = `Total Characters: ${inputElement.value.length}`
+      }
+  
+      
+    </script>
     
 </body>
 </html>
